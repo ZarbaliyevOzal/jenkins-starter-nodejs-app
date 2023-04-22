@@ -41,7 +41,7 @@ server.get('/', (req, res) => {
   res.status(200).send("Hello world");
 })
 
-server.listen(3000, () => {
-  console.log('Server is listening on port 3000');
+server.listen(3030, () => {
+  console.log('Server is listening on port 3030');
 })
 
