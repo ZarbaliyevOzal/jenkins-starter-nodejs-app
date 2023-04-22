@@ -39,6 +39,10 @@ const server = express();
 
 server.get('/', (req, res) => {
   res.status(200).send("Hello world");
+});
+
+server.get('/user', (req, res) => {
+  req.status(200).send('Hello user');
 })
 
 server.listen(3030, () => {
