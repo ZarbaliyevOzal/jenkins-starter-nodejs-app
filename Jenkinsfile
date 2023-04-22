@@ -11,18 +11,9 @@ pipeline {
         sh 'npm install'
       }
     }
-    stage('Test') {
+    stage ('Deploy') {
       steps {
-        sh 'chmod +x ./jenkins/scripts/test.sh'
-        sh './jenkins/scripts/test.sh'
-      }
-    }
-    stage('Deliver') {
-      steps {
-        sh 'chmod +x ./jenkins/scripts/deliver.sh ./jenkins/scripts/kill.sh'
-        sh './jenkins/scripts/deliver.sh'
-        input message: 'Finished using the web site? (Click "Proceed" to continue)'
-        sh './jenkins/scripts/kill.sh'
+        sh 'ls'
       }
     }
   }
