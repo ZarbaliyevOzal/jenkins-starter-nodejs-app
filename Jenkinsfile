@@ -13,6 +13,7 @@ pipeline {
     }
     stage ('Deploy') {
       steps {
+        sh 'cd ~/projects/jenkins-starter-nodejs-app'
         sh 'docker compose down'
         sh 'docker compose up -d --build'
       }
