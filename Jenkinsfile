@@ -13,7 +13,8 @@ pipeline {
     }
     stage ('Deploy') {
       steps {
-        sh 'ls'
+        sh 'docker compose down'
+        sh 'docker compose up -d --build'
       }
     }
   }
